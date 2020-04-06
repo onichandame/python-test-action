@@ -1,0 +1,17 @@
+name: 'Python test'
+description: 'Test python packages'
+inputs:
+  deps_list:
+    description: dependency list
+    required: true
+    default: requirements.txt
+  path:
+    description: path of git repo relative to GITHUB_WORKSPACE(no trailing slash)
+    required: true
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.deps_list }}

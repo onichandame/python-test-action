@@ -7,4 +7,4 @@ cd $GITHUB_WORKSPACE/$1
 pip3 install -r $2
 
 # test
-python3 -m unittest
+python3 -m unittest discover -t $3 -p $4

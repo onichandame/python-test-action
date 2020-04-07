@@ -9,9 +9,19 @@ inputs:
     description: path of git repo relative to GITHUB_WORKSPACE(no trailing slash)
     required: true
     default: ''
+  test_dir:
+    description: directory of test scripts
+    required: true
+    default: '.'
+  pattern:
+    description: pattern of the test script name
+    required: true
+    default: 'test_*.py'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.path }}
     - ${{ inputs.deps_list }}
+    - ${{ inputs.test_dir }}
+    - ${{ inputs.pattern }}

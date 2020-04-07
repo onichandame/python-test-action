@@ -1,5 +1,8 @@
 name: 'Python test'
 description: 'Test python packages'
+branding:
+  icon: check-square
+  color: green
 inputs:
   deps_list:
     description: dependency list

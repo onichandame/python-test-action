@@ -1,4 +1,4 @@
-name: 'Python test'
+name: 'Python Test'
 description: 'Test python packages'
 branding:
   icon: check-square

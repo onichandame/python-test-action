@@ -1,0 +1,27 @@
+{
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.js"],
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "lib",
+    "target": "ES6",
+    "module": "CommonJS",
+    "lib": ["ES6"],
+    "strict": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*", "node_modules/*"]
+    },
+    "esModuleInterop": true
+  }
+}

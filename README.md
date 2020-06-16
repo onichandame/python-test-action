@@ -1,6 +1,6 @@
 # python-test-action
 
-Github action that tests python package. Currently only works with [unittest](https://docs.python.org/3.6/library/unittest.html).
+Github action that tests python package. Currently only works with [unittest](https://docs.python.org/3.8/library/unittest.html) and Python 3.
 
 # Author
 
@@ -42,14 +42,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Prepare repo
-        uses: actions/checkout@master
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
       - name: Test
         uses: onichandame/python-test-action@master
         with:
-          path: 'my-repo'
           deps_list: 'requirement'
 ```
 
-- **path**: the same path passed to `actions/checkout`
 - **deps_list**: the dependency list. default to requirements.txt

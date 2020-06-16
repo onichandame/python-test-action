@@ -1,0 +1,8 @@
+name: 'Python Unit Test'
+description: 'unit test a python project'
+branding:
+  icon: check-square
+  color: blue
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

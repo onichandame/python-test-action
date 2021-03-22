@@ -1,3 +1,7 @@
+# NOTICE
+
+This action has a fatal caveat [#1](https://github.com/onichandame/python-test-action/issues/1) that almost makes it unusable. As this action is a thin wrapper around `venv` and `unittest`, it is recommended to dump this action and run bash commands directly.
+
 # python-test-action
 
 Github action that tests python package. Currently only works with [unittest](https://docs.python.org/3.8/library/unittest.html) and Python 3.

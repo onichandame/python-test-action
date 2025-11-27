@@ -1,8 +1,15 @@
-name: 'Python Unit Test'
-description: 'unit test a python project'
+name: "Python Unit Test"
+description: "unit test a python project"
 branding:
   icon: check-square
   color: blue
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node24"
+  main: "dist/index.js"
+inputs:
+  args:
+    description: the optional args after `python -m unittest`
+    default: ""
+  deps_list:
+    description: the location of requirements.txt
+    default: requirements.txt

@@ -8,10 +8,10 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=20"
   },
   "scripts": {
-    "build": "tsc && ncc build",
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=node --tsconfig=tsconfig.json --minify",
     "test": "jest",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
     "lint": "yarn format"
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
-    "@types/node": "^14.0.13",
-    "@zeit/ncc": "^0.22.3",
+    "@types/node": "^24.10.1",
+    "esbuild": "^0.27.0",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",

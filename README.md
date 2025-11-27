@@ -54,6 +54,8 @@ jobs:
         uses: onichandame/python-test-action@master
         with:
           deps_list: 'requirement'
+          args: 'discover -s tests'
 ```
 
 - **deps_list**: the dependency list. default to requirements.txt
+- **args**: the additional arguments after `python -m unittest`
